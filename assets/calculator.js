@@ -1,0 +1,1 @@
+console.log('Selamat Anda berhasil menggunakan Javascript pada Website');

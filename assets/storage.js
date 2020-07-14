@@ -10,7 +10,7 @@ function putHistory(data) {
         if (localStorage.getItem(CACHE_KEY) === null) {
             historyData = [];
         } else {
-            historyData = Json.parse(localStorage.getItem(CACHE_KEY));
+            historyData = JSON.parse(localStorage.getItem(CACHE_KEY));
         }
 
         historyData.unshift(data);
@@ -25,7 +25,7 @@ function putHistory(data) {
 
 function showHistory() {
     if (checkForStorage()) {
-        return Json.parse(localStorage.getItem(CACHE_KEY)) || [];
+        return JSON.parse(localStorage.getItem(CACHE_KEY)) || [];
     } else {
         return [];
     }

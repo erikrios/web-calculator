@@ -59,14 +59,16 @@ function performCalculation() {
         result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
     }
 
-    calculator.displayNumber = result;
-
     const history = {
         firstNumber: calculator.firstNumber,
         secondNumber: calculator.displayNumber,
         operator: calculator.operator,
         result: result
     }
+
+    putHistory(history);
+    calculator.displayNumber = result;
+    renderHistory();
 }
 
 const buttons = document.querySelectorAll(".button");

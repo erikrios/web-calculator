@@ -13,9 +13,20 @@ function clearCalculator() {
     calculator.displayNumber = '0';
     calculator.operator = null;
     calculator.firstNumber = null,
-    calculator.waitingForSecondNumber = false;
+        calculator.waitingForSecondNumber = false;
 }
 
 function inputDigit(digit) {
     calculator.displayNumber += digit;
+}
+
+const buttons = document.querySelectorAll(".button");
+for (let button of buttons) {
+    button.addEventListener('click', function(event) {
+        // Get clicked object
+        const target = event.target;
+
+        inputDigit(target.innerText);
+        updateDisplay();
+    });
 }

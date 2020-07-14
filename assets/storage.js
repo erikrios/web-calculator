@@ -46,4 +46,6 @@ function putHistory(data) {
             historyList.appendChild(row);
         }
     }
+
+    renderHistory();
 }

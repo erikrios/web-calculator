@@ -77,6 +77,11 @@ td {
     padding: 16px;
 }
 
+th {
+    background-color: orange;
+    color: white;
+}
+
 @media screen and (max-width:513px) {
     .button {
         padding: 10px;

@@ -64,6 +64,13 @@ body {
     overflow: scroll;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
 @media screen and (max-width:513px) {
     .button {
         padding: 10px;

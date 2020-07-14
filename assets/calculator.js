@@ -27,8 +27,15 @@ function inputDigit(digit) {
 const buttons = document.querySelectorAll(".button");
 for (let button of buttons) {
     button.addEventListener('click', function (event) {
+
         // Get clicked object
         const target = event.target;
+
+        if (target.classList.contains('clear')) {
+            clearCalculator();
+            updateDisplay();
+            return;
+        }
 
         inputDigit(target.innerText);
         updateDisplay();

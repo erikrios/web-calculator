@@ -21,4 +21,12 @@ function putHistory(data) {
 
         localStorage.setItem(CACHE_KEY, JSON.stringify(historyData));
     }
+
+    function showHistory() {
+        if (checkForStorage()) {
+            return Json.parse(localStorage.getItem(CACHE_KEY)) || [];
+        } else {
+            return [];
+        }
+    }
 }
